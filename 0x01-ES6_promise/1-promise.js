@@ -1,3 +1,4 @@
+export default getFullResponseFromAPI;
 function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
     if (success) {
@@ -10,5 +11,3 @@ function getFullResponseFromAPI(success) {
     }
   });
 }
-
-export default getFullResponseFromAPI;
