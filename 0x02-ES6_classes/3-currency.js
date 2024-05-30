@@ -1,4 +1,4 @@
-class Currency {
+export default class Currency {
   constructor(code, name) {
     if (code && name !== 'string') {
       throw new TypeError(postMessage);
