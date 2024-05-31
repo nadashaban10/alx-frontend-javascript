@@ -1,4 +1,4 @@
-import Car from './10-car.js'; // Assuming Car is in 10-car.js
+import Car from './10-car'; // Assuming Car is in 10-car.js
 
 export default class EVCar extends Car {
   static #range = Symbol('range');
