@@ -1,20 +1,22 @@
-import Car from './10-car'; // Assuming Car is in 10-car.js
+import Car from './10-car';
 
 export default class EVCar extends Car {
-  static #range = Symbol('range');
-
   constructor(brand, motor, color, range) {
-    super(brand, motor, color); // Call parent constructor
-    this[EVCar.#range] = range;
+    super(brand, motor, color);
+    this.range = range;
   }
 
-  // Getter for range (optional)
   get range() {
-    return this[EVCar.#range];
+    return this._range;
+  }
+
+  set range(value) {
+    this._range = value;
   }
 
   cloneCar() {
-    // Create a new Car instance with properties from this object
-    return new Car(this.brand, this.motor, this.color);
+    const Species = super.constructor[Symbol.species];
+
+    return new Species();
   }
 }
