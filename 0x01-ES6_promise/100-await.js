@@ -1,5 +1,6 @@
 import { uploadPhoto, createUser } from './utils';
 
+// async function return promises automatically
 export default async function asyncUploadUser() {
   let result = {};
 
